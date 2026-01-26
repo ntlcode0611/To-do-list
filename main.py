@@ -2,7 +2,8 @@
 # Todo: Dynamic Menu
 # Todo: Create add item 
 # Todo: Display items
-# Todo: Mark items 
+# Todo: Mark items
+ 
 def Main_menu():
     print("Menu")
     print("1. Add Item")
