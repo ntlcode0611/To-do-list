@@ -12,13 +12,13 @@ def Main_menu():
     print("0. Exit")
 
 def view_Menu():
-    print("To-do-list của bạn")
+    print("Your To-do-list: ")
     
     for index in range(len(tasklist)):
         print(index + 1, tasklist[index])
 
 def addItem():
-    task = input("add your task:")
+    task = input("Add your task:")
     tasklist.append(task)
     file_path = "data.txt"
 
@@ -28,7 +28,7 @@ def addItem():
             file.write(f"{task}\n")
 
 def deleteItem():
-    pick_delete = input("pick the task you want to delete: ")
+    pick_delete = input("Pick the task you want to delete: ")
     tasklist.pop(int(pick_delete)-1)
     file_path = "data.txt"
     with open(file_path, 'w') as file:
@@ -39,8 +39,8 @@ def deleteItem():
 
 
 def doneItem():
-    print("sử dụng xong rồi")
-    input("ấn phím bất kỳ để tiếp tục:")
+    print("You have done it!")
+    input("Press any button to continue: ")
 
 
 
@@ -54,7 +54,7 @@ with open("data.txt", 'r') as file:
     
 while True:
     Main_menu()
-    userinput = input("please select your choice: ")
+    userinput = input("Please select your choice: ")
 #Todo: press 1 for add item, 2 for display item , 3 for mark item, 0 for exit
     if userinput == "0":
         break
