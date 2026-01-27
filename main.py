@@ -28,7 +28,7 @@ def addItem():
             file.write(f"{task}\n")
 
 def deleteItem():
-    pick_delete = input("pick the task you want to delete")
+    pick_delete = input("pick the task you want to delete: ")
     tasklist.pop(int(pick_delete)-1)
     file_path = "data.txt"
     with open(file_path, 'w') as file:
